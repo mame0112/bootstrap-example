@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>AngularJS samples</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/custom-directive.js"></script>
+  </head>
+  <body ng-app="myApp">
+  <div ng-controller="Controller">
+
+  	<!-- Restrict A -->
+	<div my-directive-a></div>
+
+  	<!-- Restrict E -->
+	<my-directive-e></my-directive-e>
+
+  	<!-- Restrict C -->
+	<div class="my-directive-c"></div>
+  </div>
+  </body>
+</html>
