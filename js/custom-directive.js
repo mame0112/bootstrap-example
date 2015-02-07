@@ -1,6 +1,6 @@
 var app = angular.module('myApp', [])
 .controller('Controller', ['$scope', function($scope){
-	console.log("AAA");
+	console.log("AAAA");
 	$scope.message =  'Test message from controller';
 }])
 

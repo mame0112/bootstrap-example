@@ -5,18 +5,22 @@
     <title>AngularJS samples</title>
     <script src="js/angular.min.js"></script>
     <script src="js/custom-directive.js"></script>
+	<script src="js/my-broadcast.js"></script>
   </head>
   <body ng-app="myApp">
-  <div ng-controller="Controller">
+	<div ng-controller="Controller">
 
-  	<!-- Restrict A -->
-	<div my-directive-a></div>
+		<div my-directive-a></div>
 
-  	<!-- Restrict E -->
-	<my-directive-e></my-directive-e>
+		<my-directive-e></my-directive-e>
 
-  	<!-- Restrict C -->
-	<div class="my-directive-c"></div>
-  </div>
+		<div class="my-directive-c"></div>
+	</div>
+	<div ng-controller="ParentController" ng-init="init()">
+	 <input type="button" value="test" ng-click="parentCall()" />
+		<div ng-controller="ChildController">
+			Test message.
+		</div>
+	</div>
   </body>
 </html>
