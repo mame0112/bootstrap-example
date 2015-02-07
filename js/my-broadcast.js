@@ -1,5 +1,7 @@
-app.controller('ParentController', ['$scope', function($scope){
+app.controller('ParentController', ['$scope', 'Constants', function($scope, Constants){
 	console.log("Parent");
+	console.log("planetName: " + Constants.planetName);
+	console.log("testMessage: " + Constants.testMessage);
 	var mass = [1,2,3];
 	var num = 1;
 
