@@ -10,19 +10,19 @@ app.directive('customDirective', function(){
 });
 
 app.directive('enter', function(){
-	return function(scope, element){
+	return function(scope, element, attrs){
 		element.bind("mouseenter", function(){
 			console.log("mouse in");
-			element.addClass("panel");
+			element.addClass(attrs.enter);
 		});
 	};
 });
 
 app.directive('leave', function(){
-	return function(scope, element){
+	return function(scope, element, attrs){
 		element.bind("mouseleave", function(){
 			console.log("mouse leave");
-			element.removeClass("panel");
+			element.removeClass(attrs.enter);
 		});
 	};
 });
