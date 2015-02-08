@@ -9,6 +9,7 @@
 	<script src="js/constants.js"></script>
 	<script src="js/service.js"></script>
 	<script src="js/service2.js"></script>
+	<script src="js/custom-directive2.js"></script>
   </head>
   <body ng-app="myApp">
 	<div ng-controller="Controller">
@@ -19,6 +20,12 @@
 
 		<div class="my-directive-c"></div>
 	</div>
+
+	<div custom-directive></div>
+	<!--
+	<div ng-controller="DirectiveController">
+	</div>
+	-->
 	<div ng-controller="ParentController" ng-init="init()">
 	 <input type="button" value="test" ng-click="parentCall()" />
 		<div ng-controller="ChildController">
