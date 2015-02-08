@@ -1,4 +1,6 @@
-app.controller('ParentController', ['$scope', 'Constants', 'myService', function($scope, Constants, myService){
+app.controller('ParentController',
+ ['$scope', 'Constants', 'myService', 'myService2',
+  function($scope, Constants, myService, myService2){
 	console.log("Parent");
 	console.log("planetName: " + Constants.planetName);
 	console.log("testMessage: " + Constants.testMessage);
@@ -25,6 +27,7 @@ app.controller('ParentController', ['$scope', 'Constants', 'myService', function
 		num = num + 1;
 		console.log(num);
 		myService.addNumbers(1, 2);
+		myService2.sublNumber(3, 2);
 	};
 
 }]);
