@@ -1,15 +1,21 @@
-app.controller('ParentController', ['$scope', 'Constants', function($scope, Constants){
+app.controller('ParentController', ['$scope', 'Constants', 'myService', function($scope, Constants, myService){
 	console.log("Parent");
 	console.log("planetName: " + Constants.planetName);
 	console.log("testMessage: " + Constants.testMessage);
 	var mass = [1,2,3];
 	var num = 1;
 
+	// var myServiceInstance = myService;
+
 	$scope.init = function()
 	{
 		console.log("init: " + num);
 		// $scope.$broadcast('TEST', [1,2,3]);
 		$scope.$emit('TEST', [1,2,3]);
+
+		// $scope.result= $myService.addNumbers();
+		// console.log("result: " + result);
+
 	};
 
 	$scope.parentCall = function()
@@ -18,6 +24,7 @@ app.controller('ParentController', ['$scope', 'Constants', function($scope, Cons
 		$scope.$broadcast('TEST', [1,2,3]);
 		num = num + 1;
 		console.log(num);
+		myService.addNumbers();
 	};
 
 }]);
