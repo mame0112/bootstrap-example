@@ -1,9 +1,11 @@
 app.service('myService', ['$rootScope', function($rootScope){
 	return {
-		addNumbers:function ()
+		addNumbers:function (x, y)
 		{
 			console.log("addNumbers");
-			return 0;
+			var result = x + y;
+			console.log("result: " + result);
+			return result;
 		},
 	};
 }]);

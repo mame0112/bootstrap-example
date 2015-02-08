@@ -24,7 +24,7 @@ app.controller('ParentController', ['$scope', 'Constants', 'myService', function
 		$scope.$broadcast('TEST', [1,2,3]);
 		num = num + 1;
 		console.log(num);
-		myService.addNumbers();
+		myService.addNumbers(1, 2);
 	};
 
 }]);
@@ -35,10 +35,11 @@ app.controller('ParentController', ['$scope', 'Constants', 'myService', function
 	// console.log("child: " + num);
 // }]);
 
-app.controller('ChildController', ['$scope', function($scope){
+app.controller('ChildController', ['$scope', 'myService', function($scope, myService){
 
 	$scope.$on('TEST', function(event, mass){
 		console.log("broadcasted");
 		console.log(mass);
+		myService.addNumbers(3, 4);
 	});
 }]);
