@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>AngularJS samples</title>
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.2.2/css/foundation.css">
+<!--    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.2.2/css/foundation.css"> -->
     <script src="js/angular.min.js"></script>
     <script src="js/custom-directive.js"></script>
 	<script src="js/my-broadcast.js"></script>
@@ -22,12 +22,11 @@
 		<div class="my-directive-c"></div>
 	</div>
 
-	<div custom-directive>Put mouse here</div>
-	<div enter="panel" leave>Mouse enter / leave event</div>
-	<!--
 	<div ng-controller="DirectiveController">
+		<div custom-directive>Put mouse here</div>
+		<div enter="alertTest()" leave>Mouse enter / leave event</div>
 	</div>
-	-->
+
 	<div ng-controller="ParentController" ng-init="init()">
 	 <input type="button" value="test" ng-click="parentCall()" />
 		<div ng-controller="ChildController">
