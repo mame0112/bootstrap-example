@@ -39,6 +39,7 @@ app.controller('DirectiveController', ['$scope', function($scope){
 
 app.directive('test1', function(){
 	return {
+		scope: {},
 		controller: function($scope)
 		{
 			$scope.test_array = [];
@@ -71,4 +72,14 @@ app.directive('test2', function(){
 		}
 	};
 
+});
+
+app.directive('test3', function(){
+	return {
+		require: 'test1',
+		link: function(scope, element, attrs, test1Ctrl)
+		{
+			test1Ctrl.addFuga();
+		}
+	};
 });
